@@ -1,4 +1,4 @@
-from aiogram.types import Message
+from aiogram.types import Message,ContentType
 from config import dp
 from aiogram.dispatcher import FSMContext
 
