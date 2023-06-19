@@ -1,4 +1,4 @@
-from aiogram.types.reply_keyboard import ReplyKeyboardMarkup,ReplyKeyboardRemove
+from aiogram.types.reply_keyboard import ReplyKeyboardMarkup,ReplyKeyboardRemove,KeyboardButton
 
 home_kb=ReplyKeyboardMarkup(
     [
@@ -8,3 +8,9 @@ home_kb=ReplyKeyboardMarkup(
 )
 
 del_kb=ReplyKeyboardRemove()
+
+tel_kb=ReplyKeyboardMarkup(
+    resize_keyboard=True).add(KeyboardButton("Telefon",request_contact=True))#knopka orqali nomerini jonatadi
+
+loc_kb=ReplyKeyboardMarkup(
+    resize_keyboard=True).add(KeyboardButton("Manzil",request_location=True))#knopka orqali lokatsiyasini jonatadi
