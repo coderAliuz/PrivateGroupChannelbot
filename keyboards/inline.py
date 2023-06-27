@@ -22,3 +22,12 @@ check_sup=InlineKeyboardMarkup(
         ]
     ]
 )
+
+def check_sub_in_kb(buttons):#kanallarni linklari keladi
+    key=[]
+    for i in range(len(buttons)):
+        key.append(InlineKeyboardButton(text=f"{i+1}-kanal",url=buttons[i]))
+    #key.append(InlineKeyboardButton(text="Tekshirish",callback_data="checker"))
+    keyboards=InlineKeyboardMarkup(row_width=1)
+    keyboards.add(*key)
+    return keyboards

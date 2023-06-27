@@ -5,7 +5,7 @@ from utils import check_subscribers
 
 @dp.message_handler(commands="start")
 async def started(message:Message):
-    await message.answer("Salom quyidagi kanallarga obuna bo'ling",reply_markup=check_sup)
+    await message.answer("Salom quyidagi kanallarga obuna bo'ling")
 
 @dp.callback_query_handler(text="checker")
 async def checker_channel(call:CallbackQuery):
